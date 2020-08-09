@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./chatwindow/chat.css">
+</head>
+<body>
+
+<div id='bodybox'>
+  <div id="connect">  
+    <button onclick="createWebSocketConnection()">Connect</button>
+  </div>
+  <div id='chatborder'>
+    <p id="connectionId" class="chatlog">&nbsp;</p>
+    <p id="chatlog6" class="chatlog">&nbsp;</p>
+    <p id="chatlog5" class="chatlog">&nbsp;</p>
+    <p id="chatlog4" class="chatlog">&nbsp;</p>
+    <p id="chatlog3" class="chatlog">&nbsp;</p>
+    <p id="me" class="chatlog">&nbsp;</p>
+    <p id="others" class="chatlog">&nbsp;</p>
+    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me.">
+    <p id="blank space"></p>
+    <button onclick="sendMessage()">send</button>
+  </div>
+<script src="./chatwindow/chatwindow.js"></script>
+</body>
+</html>
