@@ -12,4 +12,4 @@ Resources:
       MemorySize: 128
       Timeout: 150
       Role: >-
-        arn:aws:iam::021536391256:role/service-role/serverlessAdmin
+        arn:aws:iam::021536391256:role/WebchatCodeDeploy
