@@ -10,5 +10,5 @@ phases:
 artifacts:
   type: zip
   files:
-    - template.yml
+    - firstcut/server/template.yml
     - outputtemplate.yml
