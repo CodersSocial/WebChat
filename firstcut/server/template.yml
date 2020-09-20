@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: SAM template for CI/CD in java.
+Resources:
+  JavaLambdaPipeline:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: 'com.amazonaws.lambda.demo.LambdaFunctionHandler::handleRequest'
+      Runtime: java8
+      CodeUri: .
+      Description: Simple Hello World.
+      MemorySize: 128
+      Timeout: 150
+      Role: >-
+        arn:aws:iam::021536391256:role/service-role/serverlessAdmin
