@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - export BUCKET=lambda-function-bucket-mumbai
-      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET
+      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
