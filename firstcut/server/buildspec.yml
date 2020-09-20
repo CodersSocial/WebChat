@@ -5,7 +5,7 @@ phases:
         java: corretto8
   build:
     commands:
-      - export BUCKET=lambda-demo-deployment-artifacts
+      - export BUCKET=lambda-function-bucket-mumbai
       - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
   type: zip
