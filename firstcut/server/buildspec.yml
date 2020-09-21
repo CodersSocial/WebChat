@@ -7,7 +7,6 @@ phases:
     commands:
       - export BUCKET=lambda-function-bucket-mumbai
       - mvn -f firstcut/server/routing/pom.xml package -Dmaven.test.skip=true 
-      - mv target/routing_service-1.0.0.jar
       - unzip routing_service-1.0.0.jar
       - rm -rf target test src buildspec.yml pom.xml routing_service-1.0.0.jar
       - aws cloudformation package --template-file firstcut/server/template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
