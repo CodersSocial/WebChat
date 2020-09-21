@@ -13,3 +13,9 @@ Resources:
       Timeout: 150
       Role: >-
         arn:aws:iam::021536391256:role/WebchatCodeDeploy
+  permission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: RoutingService
+      Action: lambda:*
+      Principal: 021536391256
