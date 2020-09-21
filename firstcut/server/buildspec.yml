@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        java: openjdk8
+        java: corretto8
   build:
     commands:
       - export BUCKET=lambda-function-bucket-mumbai
