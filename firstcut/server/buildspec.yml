@@ -2,13 +2,18 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        java: corretto8
+        java: openjdk8
   build:
     commands:
       - export BUCKET=lambda-function-bucket-mumbai
+      - mvn package shade:shade
+      - mv target/routing_service-1.0.0.jar
+      - unzip routing_service-1.0.0.jar
+      - rm -rf target test src buildspec.yml pom.xml routing_service-1.0.0.jar
       - aws cloudformation package --template-file firstcut/server/template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
   type: zip
   files:
+    - target/routing_service-1.0.0.jar
     - template.yml
     - outputtemplate.yml
