@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: SAM template for CI/CD in java.
 Resources:
-  JavaLambdaPipeline:
+  ReceiveMessage:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: 'com.amazonaws.lambda.demo.LambdaFunctionHandler::handleRequest'
+      Handler: 'com.amazonaws.lambda.service.LambdaFunctionHandler::handleRequest'
       Runtime: java8
       CodeUri: .
       Description: Simple Hello World.
