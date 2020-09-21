@@ -12,6 +12,7 @@ phases:
       - unzip service-1.0.0.jar
       - rm -rf target test src buildspec.yml pom.xml service-1.0.0.jar
       - aws cloudformation package --template-file firstcut/server/template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+      - aws cloudformation deploy --template-file outputtemplate.yml --stack-name webchat
 artifacts:
   type: zip
   files:
