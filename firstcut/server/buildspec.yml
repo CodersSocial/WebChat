@@ -15,6 +15,6 @@ phases:
 artifacts:
   type: zip
   files:
-    - target/routing_service-1.0.0.jar
+    - target/service-1.0.0.jar
     - template.yml
     - outputtemplate.yml
