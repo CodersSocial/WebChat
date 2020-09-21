@@ -10,7 +10,7 @@ phases:
       - pwd
       - mv ./firstcut/server/routing/target/service-1.0.0.jar .
       - unzip service-1.0.0.jar
-      - rm -rf target test src buildspec.yml pom.xml routing_service-1.0.0.jar
+      - rm -rf target test src buildspec.yml pom.xml service-1.0.0.jar
       - aws cloudformation package --template-file firstcut/server/template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
   type: zip
