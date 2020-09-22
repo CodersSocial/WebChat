@@ -6,7 +6,7 @@ phases:
   build:
     commands:
       - export BUCKET=lambda-function-bucket-mumbai
-      - mvn -f firstcut/server/routing/pom.xml package -Dmaven.test.skip=true 
+      - mvn -f firstcut/server/routing/pom.xml package shade:shade -Dmaven.test.skip=true 
       - pwd
       - mv ./firstcut/server/routing/target/service-1.0.0.jar .
       - unzip service-1.0.0.jar
