@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: 'com.amazonaws.lambda.service.LambdaFunctionHandler::handleRequest'
       Runtime: java8
-      CodeUri: .
+      CodeUri: ./routing
       Description: Simple Hello World.
       MemorySize: 128
       Timeout: 150
