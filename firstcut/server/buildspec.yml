@@ -8,6 +8,11 @@ phases:
       - export BUCKET=lambda-function-bucket-mumbai
       - mvn -f firstcut/server/routing/pom.xml package shade:shade -Dmaven.test.skip=true 
       - aws s3 mv firstcut/server/routing/target/service-1.0.0.jar s3://lambda-function-bucket-mumbai
+      - mv ./firstcut/server/routing/target/service-1.0.0.jar .
+      - unzip service-1.0.0.jar
+      - rm -rf target test src buildspec.yml pom.xml service-1.0.0.jar
+      - aws cloudformation package --template-file firstcut/server/template.yml --s3-bucket $BUCKET --output-template-file firstcut/server/outputtemplate.yml
+      - aws cloudformation deploy --template-file firstcut/server/outputtemplate.yml --stack-name webchat
 artifacts:
   type: zip
   files:
