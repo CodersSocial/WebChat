@@ -11,5 +11,6 @@ phases:
 artifacts:
   type: zip
   files:
-    - template.yml
-    - outputtemplate.yml
+    - firstcut/server/routing/target/service-1.0.0.jar
+    - firstcut/server/template.yml
+    - firstcut/server/outputtemplate.yml
