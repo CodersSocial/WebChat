@@ -10,6 +10,6 @@ public class LambdaFunctionHandler implements RequestHandler<Object, String> {
 		context.getLogger().log("Input: " + input);
 
 		// TODO: implement your handler
-		return "Hello from Coders Social! This build is taken from master after pull request";
+		return "Hello from Coders Social! This build is taken from master after pull request!";
 	}
 }
