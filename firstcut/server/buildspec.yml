@@ -8,7 +8,6 @@ phases:
       - export BUCKET=lambda-function-bucket-mumbai
       - mvn -f firstcut/server/routing/pom.xml package shade:shade -Dmaven.test.skip=true 
       - aws s3 cp firstcut/server/routing/target/service-1.0.0.jar s3://lambda-function-bucket-mumbai
-    post_build:
       - aws lambda update-function-code --function-name RoutingService --s3-bucket lambda-function-bucket-mumbai --s3-key service-1.0.0.jar
 artifacts:
   type: zip
